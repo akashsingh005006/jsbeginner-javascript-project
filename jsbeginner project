@@ -1,0 +1,34 @@
+const nfts = [];
+function mintNFT (doctorName,specialisation,experience,hospitalName) {
+    const nftDoctor = {
+        "doctorName": doctorName,
+        "specialisation": specialisation,
+        "experience": experience,
+        "hospitalName": hospitalName
+
+    }
+    nfts.push(nftDoctor);
+    console.log("Data: " + doctorName);
+}
+
+    function listNFTs () {
+        for(let i=0; i < nfts.length; i++) {
+            console.log("\ndoctorName:" + nfts[i].doctorName);
+            console.log("specialisation:" + nfts[i].specialisation);
+            console.log("experience:" + nfts[i].experience );
+            console.log("hospitalName:" + nfts[i].hospitalName);
+        }    
+
+}
+
+function getTotalSupply() {
+console.log( "\nTotal NFTs: " + nfts.length);
+}
+
+mintNFT("Suresh Advani", "cardiologist", 4, "hinduja hospital");
+mintNFT("S K aggarwal", "nephrologist", 10, "AIIMS");
+mintNFT("Ramesh Sen", "Surgeon", 13, "Apollo hospital");
+
+listNFTs();
+getTotalSupply();
+
